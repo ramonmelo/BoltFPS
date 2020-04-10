@@ -37,6 +37,8 @@ public class PlayerController : MonoBehaviour
 
 	private readonly int _animatorHorizontalParam = Animator.StringToHash("Horizontal");
 	private readonly int _animatorVerticalParam = Animator.StringToHash("Vertical");
+	private readonly int _animarorFireParam = Animator.StringToHash("Fire");
+	private readonly int _animarorSpeedMultiParam = Animator.StringToHash("SpeedMulti");
 
 	private void Awake()
 	{
@@ -54,8 +56,10 @@ public class PlayerController : MonoBehaviour
 		float verticalAxis = Input.GetAxisRaw(VerticalAxis);
 		float horizontalAxis = Input.GetAxisRaw(HorizontalAxis);
 
+		_animator.SetFloat(_animarorSpeedMultiParam, Speed);
 		_animator.SetFloat(_animatorVerticalParam, verticalAxis, AnimationDamping, Time.deltaTime);
 		_animator.SetFloat(_animatorHorizontalParam, horizontalAxis, AnimationDamping, Time.deltaTime);
+		_animator.SetBool(_animarorFireParam, Input.GetMouseButton(0));
 
 		var forwardMove = transform.forward * verticalAxis * Speed * Time.deltaTime;
 		var sidewayMove = transform.right * horizontalAxis * Speed * Time.deltaTime;

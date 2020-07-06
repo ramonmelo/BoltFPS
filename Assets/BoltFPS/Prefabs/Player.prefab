@@ -1507,6 +1507,7 @@ GameObject:
   - component: {fileID: 4436130506537375710}
   - component: {fileID: 2785198602574860707}
   - component: {fileID: 2429196040371053407}
+  - component: {fileID: 5291627566051569292}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1590,8 +1591,8 @@ MonoBehaviour:
     xSensitivity: 2
     ySensitivity: 2
     clampVerticalRotation: 1
-    minimumX: -90
-    maximumX: 90
+    minimumX: -70
+    maximumX: 70
 --- !u!114 &4436130506537375710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1638,6 +1639,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GunRoot: {fileID: 1813281269}
+--- !u!114 &5291627566051569292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394217842670278392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f48113afac5384e0d8bf45d16b736640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActiveFullBody: 1
+  FullBodySkin: {fileID: 1394217842656615422}
+  OnlyArmsSkin: {fileID: 1394217842656615420}
+  _skins:
+  - {fileID: 2100000, guid: 4d617c5e8807142bcbc78ddf731fa9b2, type: 2}
+  - {fileID: 2100000, guid: 410a6bf5aa6e74564aaace06de7a48cb, type: 2}
+  - {fileID: 2100000, guid: 66c737e24ed6444bb8863077d37f51b3, type: 2}
+  - {fileID: 2100000, guid: 472ed7b7976f64a76937fcb57f4846b9, type: 2}
+  - {fileID: 2100000, guid: 21c523da74de5e640b1b068246fd96e1, type: 2}
+  - {fileID: 2100000, guid: f7fbe4d2a11324b1e871b6205e79f16a, type: 2}
+  - {fileID: 2100000, guid: 6f83a2ee37e42417ba6dff8e1f21f904, type: 2}
+  - {fileID: 2100000, guid: 6c0136a762e1e45f0ad04d7351127c7a, type: 2}
 --- !u!1 &1394217842670278394
 GameObject:
   m_ObjectHideFlags: 0
@@ -1846,7 +1871,7 @@ SkinnedMeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1394217842670278398}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
